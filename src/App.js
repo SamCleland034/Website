@@ -1,23 +1,50 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { Route, Routes, Link } from 'react-router-dom';
+import Projects from './projects.js';
+import profilePic from './me.jpeg'; // with import
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div className="App">
+        {/* Updated Navbar with Buttons and Social Links */}
+        <nav className="navbar">
+          <Link to="/" className="home-button">Home</Link>
+          <Link to="/projects.js" className="home-button">Projects</Link>
+          <Link to="/about" className="home-button">About Me</Link>
+  
+          <div className="social-links">
+            <a href="https://x.com/samcleland6" target="_blank" rel="noopener noreferrer">
+              <FaTwitter />
+            </a>
+            <a href="https://linkedin.com/in/samcleland34" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
+            </a>
+            <a href="https://github.com/SamCleland034" target="_blank" rel="noopener noreferrer">
+              <FaGithub />
+            </a>
+          </div>
+        </nav>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="content-overlay">
+            <header className="hero">
+              <h1>Sam Cleland</h1>
+              <img src={profilePic} alt="SC" className="profile-image"/>
+              <p className="tagline">Fordham MBA Student | Data Enthusiast | McGill Comp Eng Grad</p>
+              <p className="intro">I’m a current MBA student with a background in Computer Engineering. Explore my work!</p>
+     
+            </header>
+            </div>
+          }
+        />
+        <Route path="/projects.js" element={<Projects/>} />
+      </Routes>
     </div>
   );
 }

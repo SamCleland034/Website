@@ -1,38 +1,265 @@
-.App {
+:root {
+  --primary-color: #00539B;
+  --secondary-color: #FFFFFF;
+  --accent-color: #FFCD00;
+  --background-color: #F5F5F5;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-size: 200px;
+  background-color: var(--background-color);
+  margin: 0;
+}
+
+.navbar {
+  background-color: rgba(0, 83, 155, 0.9); /* Transparent version of primary-color */
+  padding: 10px 20px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-button {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-button:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--primary-color);
+  margin-top: 20px; /* Space below navbar */
+}
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.intro {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: var(--accent-color);
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 15px;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px auto;
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+}
+
+.project-list {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.project-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.project-card a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+  .buttons button {
+    margin: 5px;
+    padding: 8px 15px;
+  }
+}
+
+body {
+  margin: 0;
+  background: url('../public/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden; /* Prevent scroll issues with animations */
+}
+
+.player {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url('./baseball.png') no-repeat center;
+  background-size: cover;
+  animation: movePlayer 10s infinite linear;
+}
+
+@keyframes movePlayer {
+  0% {
+    left: -30px;
+    top: 50%;
     transform: rotate(0deg);
   }
-  to {
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    left: 50%;
+    top: 20%;
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    left: 100%;
+    top: 70%;
     transform: rotate(360deg);
   }
+}
+
+body::before, body::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url('./baseball.png') no-repeat center;
+  background-size: cover;
+  animation: movePlayer 10s infinite linear reverse;
+}
+body::before { animation-delay: 0s; top: 20%; }
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  background: rgba(245, 245, 245, 0.0); /* Reduced from 0.9 to 0.6 */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.hero h1 {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards 0.5s;
+}
+
+.tagline {
+  opacity: 0;
+  animation: fadeIn 0.75s forwards 1s;
+}
+
+.intro {
+  opacity: 0;
+  animation: fadeIn 1s forwards 1.5s;
+}
+
+.project-list {
+  opacity: 0;
+  animation: fadeIn 1.25s forwards 1.75s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+  background-color: var(--accent-color);
 }
