@@ -11,9 +11,9 @@ function Projects() {
       link: "https://github.com/SamCleland034/March-Madness",
     },
     {
-      title: "",
-      description: "",
-      link:"",
+      title: "Real Time Trading Algorithm",
+      description: "Algorithmic Trading Dashboard showing the trades the script is running, base amount starts at 100k (paper trading) ",
+      link:"https://github.com/SamCleland034/Trading-Algorithm",
     }
   ];
 
