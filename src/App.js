@@ -30,7 +30,7 @@ function App() {
         </nav>
       <Routes>
         <Route
-          path="/"
+          path="/Website"
           element={
             <div className="content-overlay">
             <header className="hero">
