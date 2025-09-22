@@ -12,7 +12,7 @@ function App() {
   <div className="App">
         {/* Updated Navbar with Buttons and Social Links */}
         <nav className="navbar">
-          <Link to="/" className="home-button">Home</Link>
+          <Link to="/Website" className="home-button">Home</Link>
           <Link to="/projects.js" className="home-button">Projects</Link>
           <Link to="/about" className="home-button">About Me</Link>
   
