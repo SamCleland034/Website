@@ -9,7 +9,14 @@ import profilePic from './me.jpeg'; // with import
 
 function App() {
   return (
-  <div className="App">
+  <div
+    className="App"
+    style={{
+      height: "100vh",
+      overflowY: "auto",
+      WebkitOverflowScrolling: "touch"
+    }}
+  >
         {/* Updated Navbar with Buttons and Social Links */}
         <nav className="navbar">
           <Link to="/" className="home-button">Home</Link>
