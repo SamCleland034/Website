@@ -21,7 +21,6 @@ function App() {
         <nav className="navbar">
           <Link to="/" className="home-button">Home</Link>
           <Link to="/projects.js" className="home-button">Projects</Link>
-          <Link to="/about" className="home-button">About Me</Link>
   
           <div className="social-links">
             <a href="https://x.com/samcleland6" target="_blank" rel="noopener noreferrer">
@@ -44,7 +43,7 @@ function App() {
               <h1>Sam Cleland</h1>
               <img src={profilePic} alt="SC" className="profile-image"/>
               <p className="tagline">Fordham MBA Student | Data Enthusiast | McGill Comp Eng Grad</p>
-              <p className="intro">I’m a current MBA student with a background in Computer Engineering. Explore my work!</p>
+              <p className="intro">I’m a current MBA student with a background in Computer Engineering. Currently looking for Full Time Opportunities!</p>
      
             </header>
             </div>
