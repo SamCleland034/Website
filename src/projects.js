@@ -12,12 +12,12 @@ function Projects() {
     },
     {
       title: "Real Time Trading Algorithm",
-      description: "Algorithmic Trading Dashboard showing the trades the script is running, base amount starts at 100k (paper trading). ",
-      link:"https://github.com/SamCleland034/Trading-Algorithm",
+      description: "Algorithmic Trading Dashboard showing the trades I make using my python script, base amount starts at 100k (paper trading). ",
+      link:"SamCleland034.github.io/Trading-Algorithm",
     },
     {
       title: "NLP Tool for Contract Risk Analysis",
-      description: "•	Developed automated NLP pipeline to extract, preprocess, and classify contract clauses into low/moderate/high risk categories using regex for extraction, NLTK/WordNet for lemmatization/tokenization, and Bidirectional LSTM model in TensorFlow.",
+      description: "Developed automated NLP pipeline to extract, preprocess, and classify contract clauses into low/moderate/high risk categories using regex for extraction, NLTK/WordNet for lemmatization/tokenization, and Bidirectional LSTM model in TensorFlow.",
       link:"https://github.com/SamCleland034/NLP-Contract-Risk-Analyzer",
     },
     {
