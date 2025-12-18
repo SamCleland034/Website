@@ -29,7 +29,14 @@ function Projects() {
       title: "Modified Monte Carlo Tree Search AI for Board Game",
       description: "Implemented variant of MCTS with modified Upper Confidence Bound to simulate both player and opponent actions in a game called Pentago-Swap, incorporating minimax-like minimization for opponent turns to better model adversarial play. Finished in top 5% of students.",
       link: "https://github.com/SamCleland034/COMP-424"
-    }
+    },
+    {
+      title: "IMDB and Box Office Mojo Web Scraping Tool",
+      description: "Created a web scraping tool that aggregates movie information from IDMB and box office mojo in order to do Tableau analysis with the aggregate information.",
+      link: "https://github.com/SamCleland034/IMDB-Box-Office-Mojo-Web-Scraper"
+    },
+
+
 
   ];
 
