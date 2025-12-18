@@ -42,7 +42,7 @@ function App() {
             <header className="hero">
               <h1>Sam Cleland</h1>
               <img src={profilePic} alt="SC" className="profile-image"/>
-              <p className="tagline">Fordham MBA Student | Data Enthusiast | McGill Comp Eng Grad</p>
+              <p className="tagline">Fordham MBA Student | Data Analytics | McGill Comp Eng Grad</p>
               <p className="intro">I’m a current MBA student with a background in Computer Engineering. Currently looking for Full Time Opportunities!</p>
      
             </header>

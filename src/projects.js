@@ -13,7 +13,7 @@ function Projects() {
     {
       title: "Real Time Trading Algorithm",
       description: "Algorithmic Trading Dashboard showing the trades I make using my python script, base amount starts at 100k (paper trading). ",
-      link:"SamCleland034.github.io/Trading-Algorithm",
+      link:"./Trading-Algorithm/",
     },
     {
       title: "NLP Tool for Contract Risk Analysis",
