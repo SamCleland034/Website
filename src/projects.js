@@ -1,59 +1,76 @@
 import React from 'react';
-import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import './App.css';
 
 function Projects() {
   const projects = [
     {
+      title: "RAG-AI Meal-Prep Service",
+      description: "Built a RAG-AI System using GPT-4o/Gemini to automate personalized 7-day meal plans with ChromaDB for persistence. Hosted on Google Cloud.",
+      link: "https://github.com/SamCleland034/NourishAI",
+      demoLink: "https://nourish-ai-nu.vercel.app",
+      tags: ["Python", "RAG", "GPT-4o", "Gemini", "ChromaDB", "Google Cloud"],
+    },
+    {
       title: "NCAA Basketball Predictor",
-      description: "Competition where teams were tasked with creating a model with any data to predict probabilities of March Madness games using a TensorFlow SNN model. Finished 2nd place out of 10 teams.",
+      description: "Created a TensorFlow SNN model to predict probabilities of March Madness games. Finished 2nd place out of 10 teams.",
       link: "https://github.com/SamCleland034/March-Madness",
+      tags: ["Python", "TensorFlow", "Neural Network", "Sports Analytics"],
     },
     {
-      title: "Real Time Trading Algorithm",
-      description: "Algorithmic Trading Dashboard showing the trades I make using my python script, base amount starts at 100k (paper trading). ",
-      link:"https://samcleland034.github.io/Trading-Algorithm",
+      title: "Trading Algorithm Dashboard",
+      description: "Next.js/TypeScript frontend dashboard for visualizing and monitoring the LLM-based crypto sentiment trading signals in real time.",
+      link: "https://github.com/SamCleland034/Trading-Algorithm-UI",
+      tags: ["Next.js", "TypeScript", "CSS"],
     },
     {
-      title: "NLP Tool for Contract Risk Analysis",
-      description: "Developed automated NLP pipeline to extract, preprocess, and classify contract clauses into low/moderate/high risk categories using regex for extraction, NLTK/WordNet for lemmatization/tokenization, and Bidirectional LSTM model in TensorFlow.",
-      link:"https://github.com/SamCleland034/NLP-Contract-Risk-Analyzer",
+      title: "IMDB Box Office Mojo Web Scraper",
+      description: "Web scraper that extracts box office performance data from IMDB and Box Office Mojo for downstream analysis and reporting.",
+      link: "https://github.com/SamCleland034/IMDB-Box-Office-Mojo-Web-Scraper",
+      tags: ["Python", "Web Scraping", "Data Analysis"],
     },
     {
-      title: "Robot Obstacle Course",
-      description: "Created Robot using Java Lejos EV3 to play a game of Capture the Flag on an obstacle course. Robot had to traverse a zipline in order to complete the course. Finished first place out of 20 teams.",
-      link: "https://github.com/SamCleland034/ECSE-211-Design-Team-3"
+      title: "Autonomous Robot Navigation (McGill)",
+      description: "Java-based software for an autonomous robot designed to navigate a course, avoid obstacles, and complete tasks as part of McGill's ECSE-211 engineering design competition.",
+      link: "https://github.com/SamCleland034/ECSE-211-Design-Team-3",
+      tags: ["Java", "Robotics", "Embedded Systems"],
     },
     {
-      title: "Modified Monte Carlo Tree Search AI for Board Game",
-      description: "Implemented variant of MCTS with modified Upper Confidence Bound to simulate both player and opponent actions in a game called Pentago-Swap, incorporating minimax-like minimization for opponent turns to better model adversarial play. Finished in top 5% of students.",
-      link: "https://github.com/SamCleland034/COMP-424"
+      title: "NLP Contract Risk Analyzer",
+      description: "Developed automated NLP pipeline to classify contract clauses into risk categories using Bidirectional LSTM in TensorFlow.",
+      link: "https://github.com/SamCleland034/NLP-Contract-Risk-Analyzer",
+      tags: ["Python", "TensorFlow", "NLP", "LSTM", "Text Classification"],
     },
-    {
-      title: "IMDB and Box Office Mojo Web Scraping Tool",
-      description: "Created a web scraping tool that aggregates movie information from IDMB and box office mojo in order to do Tableau analysis with the aggregate information.",
-      link: "https://github.com/SamCleland034/IMDB-Box-Office-Mojo-Web-Scraper"
-    }
   ];
 
   return (
-    <div className="App">
-      <header className="hero">
+    <div className="projects-container">
+      <div className="hero">
         <h1>Projects</h1>
-        <p className="intro">Check out my latest work and contributions!</p>
-        <div className="project-list">
-          {projects.map((project, index) => (
-            <div key={index} className="project-card">
-              <h2>{project.title}</h2>
-              <p>{project.description}</p>
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                View
-              </a>
+        <p className="intro">A selection of my recent technical work and academic achievements.</p>
+      </div>
+      <div className="project-list">
+        {projects.map((project, index) => (
+          <div key={index} className="project-card">
+            <h2>{project.title}</h2>
+            <p>{project.description}</p>
+            <div className="project-tags">
+              {project.tags.map(tag => (
+                <span key={tag} className="project-tag">{tag}</span>
+              ))}
             </div>
-          ))}
-        </div>
-      </header>
+            <div className="project-card-links">
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                View Code
+              </a>
+              {project.demoLink && (
+                <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="demo-link">
+                  Live Demo
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
