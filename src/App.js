@@ -8,6 +8,7 @@ import {
   FaRobot,
   FaCode,
   FaChartLine,
+  FaTasks,
   FaSun,
   FaMoon,
   FaBars,
@@ -160,6 +161,17 @@ function App() {
                         Graduated with an MBA in Financial Technology with a focus on applying machine
                         learning and data analytics to finance. Interested in algorithmic trading,
                         risk modeling, and data-driven decision making.
+                      </p>
+                    </Reveal>
+                    <Reveal delay={300} className="interest-card">
+                      <div className="interest-icon-wrap">
+                        <FaTasks className="interest-icon" />
+                      </div>
+                      <h3>Product Management</h3>
+                      <p>
+                        Drawn to the space between engineering and strategy — translating technical
+                        capabilities into roadmaps, prioritizing features against business goals, and
+                        working cross-functionally to ship products that people actually use.
                       </p>
                     </Reveal>
                   </div>
